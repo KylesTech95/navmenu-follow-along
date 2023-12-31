@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style:none;
+    text-decoration:none;
+}
+body{
+    background:silver;
+}
+#logo-container{
+    display:flex;
+    width:300px;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    margin: 2rem;
+    border: 4px solid indigo;
+    border-radius:12px;
+
+}
+/*logo*/
+#logo{
+    font-size:2rem;
+    color:indigo;
+}
+
+/*navigation menu*/
+#nav1{
+    width: 100%;
+    position:sticky;
+    top:0;
+    left:0;
+    height:15vh;
+    background:indigo;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    opacity:.85;
+}
+.list-container{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items:Center;
+    gap:.75rem;
+}
+.list-item,
+.list-item2{
+    
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width: 100%;
+    transition:.25s;
+}
+.list-link,
+.list-link2{
+padding: 2rem 0;
+width: 100%;
+color:#fff;
+margin: 0 auto;
+text-align:center;
+transition:.25s;
+font-size: 2rem;
+
+}
+.list-item:hover,
+.list-link:hover,
+.list-link2:hover,
+.list-item2:hover{
+    background:#fff;
+    color:indigo;
+    transition:.3s;
+}
+
+#toggle-button{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    border: none;
+    position:fixed;
+    top:25px;
+    right:25px;
+    display:none;
+    /*transition between green & red*/
+    transition:.25s;
+    
+}
+
+#nav2{
+    position:fixed;
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height: 75vh;
+}
+.list-container2{
+    width: 400px;
+    display:flex;
+    flex-direction:column;
+    align-items:Center;
+    justify-content:center;
+    gap:.75rem;
+}
+
+.list-item2{
+    background: indigo;
+    transition:.25s;
+}
+/*hide list item*/
+.list-item-hidden{
+    transform:translate(-2000px,0)
+}
+.list-item-appear{
+    transform:translate(0,0)
+}
+
+
+/*media query for mobile view*/
+@media screen and (max-width:800px){
+    #toggle-button{
+        display:block;
+    }
+    #nav1{
+        display:none;
+    }
+}
