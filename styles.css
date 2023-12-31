@@ -39,6 +39,7 @@ body{
     justify-content:center;
     opacity:.85;
 }
+/*unordered list element*/
 .list-container{
     width: 100%;
     display:flex;
@@ -46,6 +47,7 @@ body{
     align-items:Center;
     gap:.75rem;
 }
+/*ist-items*/
 .list-item,
 .list-item2{
     
@@ -56,6 +58,7 @@ body{
     width: 100%;
     transition:.25s;
 }
+/*article tags within list-items*/
 .list-link,
 .list-link2{
 padding: 2rem 0;
@@ -90,6 +93,11 @@ font-size: 2rem;
     
 }
 
+/*toggle button for mobile use*/
+#toggle-button:hover{
+    cursor:pointer;
+}
+/*navmenu*/
 #nav2{
     position:fixed;
     width: 100%;

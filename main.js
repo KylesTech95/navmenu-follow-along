@@ -10,18 +10,19 @@ toggleFn = () => {
 let colors = ['green','red']
 togBtn.style = `background-color: ${colors[counter%2==0?1:0]}`
 
-
+//obtain an arry from parent container
 let list = [...listContainer2.children]
 console.log(list)
 list.forEach((li,index) => {
+    //setTimeout for list-items
     setTimeout(() => {
+        //toggle class
         li.classList.toggle('list-item-appear')
     }, 600 * (index+1))
 })
 }
 
 //resize function to reset toggle menu back to default state
-
 function resizeMe(){
     window.addEventListener('resize',e=>{
         let testWidth = e.target.innerWidth;
@@ -32,6 +33,7 @@ function resizeMe(){
             let list = [...listContainer2.children]
 
             list.forEach((li,index) => {
+                //remove classs
                 li.classList.remove('list-item-appear')
             }) 
         }
